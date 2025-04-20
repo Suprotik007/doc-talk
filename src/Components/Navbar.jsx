@@ -8,7 +8,7 @@ const Navbar = () => {
     <li>Contact Us</li>
     </>
     return (
-        <div className="navbar bg-white  px-40 mx-auto">
+        <div className="navbar mt-5 md:px-10 lg:px-40  ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,10 +20,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="flex items-center gap-3 font-extrabold  text-3xl btn-ghost "><img className='w-[48px] h-[48px]' src="/src/assets/logo.png" alt="" /> Phudu</a>
+          <p className="flex items-center gap-3 font-extrabold  text-3xl btn-ghost "><img className='w-[48px] h-[48px]' src="/src/assets/logo.png" alt="" /> Phudu</p>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal gap-12 px-1 font-medium text-gray-500">
+          <ul className="menu menu-horizontal gap-10 px-1 font-medium text-gray-500">
             {links}
           </ul>
         </div>
