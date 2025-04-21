@@ -4,6 +4,7 @@ import DoctorContainer from '../Components/DoctorContainer';
 import { useLoaderData } from 'react-router';
 import Service from '../Components/Service';
 
+
 const Home = () => {
     const data=useLoaderData()
     console.log(data);
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <DoctorContainer data={data}></DoctorContainer>
             <Service></Service>
+            
         </div>
     );
 };

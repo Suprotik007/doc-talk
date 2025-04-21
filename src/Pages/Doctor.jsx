@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Doctor = ({singleDoctor}) => {
-    console.log(singleDoctor);
-    const {image,name,education,experience,registrationNumber,availability }=singleDoctor || {};
+    // console.log(singleDoctor);
+    const {id,image,name,education,experience,registrationNumber,availability }=singleDoctor || {};
     return (
-        <div className=''>
+       
+        <div >
             <div className="card w-[320px] h-[400px] bg-base-100 rounded- shadow-sm">
         <figure className="px-5 pt-20">
           <img 
@@ -20,14 +22,16 @@ const Doctor = ({singleDoctor}) => {
           <h2 className=" pb-1 font-extrabold text-2xl">{name}</h2>
           <p className='border-b-1 border-dashed font-medium text-gray-500 pb-3'>{education}</p>
           <p className='text-gray-500  pt-1 '>Reg.No :{registrationNumber}</p>
+          <Link to={`/doctorDetails/${id}`}>
           <div className="card-actions">
           <button className="btn btn-outline btn-primary rounded-2xl  btn-wide mt-5">View Details</button>
-          </div>
+          </div></Link>
           
         </div>
       </div>
       
         </div>
+        
     );
 };
 
