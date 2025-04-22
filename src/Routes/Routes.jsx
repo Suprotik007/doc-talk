@@ -30,7 +30,13 @@ export const router = createBrowserRouter([
          loader:()=>fetch('/doctors.json'),
          Component:MyBookings,
 
+        },
+        {
+          
+          path:'/contact',
+          Component:ErrorPage,
         }
       ]
     },
   ]); 
+

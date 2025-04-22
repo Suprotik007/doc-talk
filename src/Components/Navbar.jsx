@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
+import NavLinks from './NavLinks';
 
 const Navbar = () => {
     const links=< >
     
-    <Link  to='/'><span className=' hover:text-blue-500'>Home</span></Link>
-    <Link to='/myBookings'><span className=' hover:text-blue-500'>My-bookings</span></Link>
-    <Link to='/'><span className=' hover:text-blue -500'>Blogs</span></Link>
-    <span className=' hover:text-blue-500'>Contact Us</span>
+    <NavLink  to='/'><span className=' hover:text-blue-500'>Home</span></NavLink>
+    <NavLink to='/myBookings'><span className=' hover:text-blue-500'>My-bookings</span></NavLink>
+    <NavLink to='/'><span className=' hover:text-blue-500'>Blogs</span></NavLink>
+    <NavLink to='/contact'><span className=' hover:text-blue-500'>Contact Us</span></NavLink>
     
     </>
     return (
+
         <div className="navbar mt-1 md:px-10 lg:px-40  ">
+          <div>
+            
+          </div>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -2,3 +2,6 @@
     border-image: linear-gradient(to top ,skyblue, white) 1;
     
 }
+.active{
+    border-bottom: 2px solid ;
+}

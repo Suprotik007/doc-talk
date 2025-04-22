@@ -1,17 +1,20 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 import Footer from '../Components/Footer';
 import Banner from '../Components/Banner';
 
 const Root = () => {
-    return (
-        <div className=''>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-    );
+    const location = useLocation();
+  const hideNavFooter = location.pathname === '/contact';
+
+  return (
+    <>
+      {!hideNavFooter && <Navbar />}
+      <Outlet />
+      {!hideNavFooter && <Footer />}
+    </>
+  );
 };
 
 export default Root;
