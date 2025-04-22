@@ -11,6 +11,8 @@ const getStoredBook=()=>{
 }
 
 
+
+  
 const addToStoreBook=(id)=>{
     const storedBookingData =getStoredBook()
     if(storedBookingData.includes(id)){
@@ -28,3 +30,16 @@ const addToStoreBook=(id)=>{
 }
 
 export {addToStoreBook,getStoredBook}
+
+
+
+export const removeAppointments = (id) => {
+    const appointments = getStoredBook(); // array of strings
+    const idStr = id.toString();
+  
+    const remainingAppointments = appointments.filter(appointmentId => appointmentId !== idStr);
+  
+    localStorage.setItem('BookList', JSON.stringify(remainingAppointments));
+  };
+  
+  

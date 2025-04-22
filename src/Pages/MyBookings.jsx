@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
-import { getStoredBook } from '../Utilities/Booking';
+import { getStoredBook, removeAppointments } from '../Utilities/Booking';
+import { ToastContainer, toast } from 'react-toastify';
 import Doctor from './Doctor';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyBookings = () => {
     const[bookings,setBookings]=useState([])
@@ -15,6 +17,24 @@ const MyBookings = () => {
     const myBookings=data.doctors.filter(appointment=>convertBookingData.includes(appointment.id))
     setBookings(myBookings);
    },[data.doctors])
+
+  
+  
+  const handleRemove = (id) => {
+        removeAppointments(id);
+        setBookings(prev => prev.filter(booking => booking.id !== id));
+        toast.error('Cancelled appointment', {
+          autoClose: 3000,
+           position: "top-right",
+           hideProgressBar: false,
+           closeOnClick: true,
+           pauseOnHover: true,
+           draggable: true,
+         });
+       };
+ 
+
+  
     return (
         <div>
             
@@ -37,14 +57,20 @@ const MyBookings = () => {
               </p>
             </div>
             
-            <button className="btn btn-error btn-outline rounded-3xl w-2xl mt-8 mb-12">
-              Cancel Appointment
+            <button onClick={() => handleRemove(appointment.id)}
+               className="btn btn-error btn-outline rounded-3xl w-2xl mt-8 mb-12">
+              Cancel Appointment 
             </button>
+            
+            
           </div>
         ))}
+        
       </div>
+      <ToastContainer />
     </div>
   );
-};
+}; 
 
 export default MyBookings;
+

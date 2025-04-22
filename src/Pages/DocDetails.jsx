@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
 import Doctor from './Doctor';
 import { addToStoreBook } from '../Utilities/Booking';
 const DocDetails = () => {
@@ -14,6 +15,16 @@ const DocDetails = () => {
     const handleBookings=(id)=>{
 addToStoreBook(id)
     }
+    const handleBookAppointment = () => {
+      toast.success(`Successfully booked ${name} `, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    };
     
     
     
@@ -58,8 +69,8 @@ addToStoreBook(id)
        
       </div> 
       <p className='badge text-xs mt-5  border-amber-500  bg-amber-100 text-amber-600'> ! Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
-      <button onClick={()=>handleBookings(id)} className="btn btn-primary rounded-3xl w-2xl  mt-8 mb-12">Book Appointment Now</button>
-    </div>
+      <button onClick={()=>{handleBookings(id), handleBookAppointment()}} className="btn btn-primary rounded-3xl w-2xl  mt-8 mb-12">Book Appointment Now</button>
+    </div><ToastContainer />
   </div>
 </div>
 </div>
