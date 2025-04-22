@@ -12,21 +12,31 @@ const DocDetails = () => {
     const {image,name,education,registrationNumber,speciality,availableDays,fee,workingAt,availability }=singleDoc;
     // console.log(singleDoc);
     
-    const handleBookings=(id)=>{
-addToStoreBook(id)
-    }
-    const handleBookAppointment = () => {
-      toast.success(`Successfully booked ${name} `, {
-        autoClose: 3000,
-        position: "top-right",
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
-    };
+
     
-    
+const handleBookings = (id) => {
+  const isNewBooking = addToStoreBook(id);
+
+  if (isNewBooking) {
+    toast.success(`Successfully booked ${name}`, {
+      autoClose: 3000,
+      position: "top-right",
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  } else {
+    toast.info("Already took the appointment", {
+      autoClose: 3000,
+      position: "top-right",
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  }
+};
     
     return (
         <div>

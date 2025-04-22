@@ -16,7 +16,7 @@ const Banner = () => {
   <button className="btn btn-primary py-6 px-8 mt-4 rounded-3xl join-item font-bold text-xl">Search Now</button>
 </div>
 {/* img */}
-<div className='flex w-105 gap-6 pt-6  pb-40'>
+<div className='flex w-105 gap-6 pt-10  pb-35'>
 <img className='' src="/src/assets/banner-img-1.png" alt="" />
 <img src="/src/assets/banner-img-1.png" alt="" />
 

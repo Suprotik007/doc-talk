@@ -15,9 +15,9 @@ const DoctorContainer = ({data}) => {
     },[data,displayAll])
     
     return (
-        <div className='pt-20 text-center mx-40' >
+        <div className='pt-20  text-center mx-40' >
             <h1 className='font-extrabold text-4xl'>Our Best Doctors</h1>
-            <p className='text-lg pt-4 text-gray-500'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
+            <p className='text-lg pt-4 pb-8 text-gray-500'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
 
             <Suspense fallback={<span>Loading....</span>}>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-6 '>

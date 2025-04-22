@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from 'react-toastify';
+
 const getStoredBook=()=>{
     const  storedBook=localStorage.getItem("BookList")
 
@@ -12,25 +14,21 @@ const getStoredBook=()=>{
 
 
 
-  
-const addToStoreBook=(id)=>{
-    const storedBookingData =getStoredBook()
-    if(storedBookingData.includes(id)){
-        alert("Already took the appointment")
 
-    }
-    else{
-        storedBookingData.push(id)
-        // console.log(storedBookingData);
-        const data=JSON.stringify(storedBookingData)
-        localStorage.setItem('BookList',data)
+const addToStoreBook = (id) => {
+  const storedBookingData = getStoredBook();
 
-        
-    }
-}
+  if (storedBookingData.includes(id)) {
+    
+    return false;
+  } else {
+    storedBookingData.push(id);
+    localStorage.setItem('BookList', JSON.stringify(storedBookingData));
+    return true;
+  }
+};
 
-export {addToStoreBook,getStoredBook}
-
+export { addToStoreBook, getStoredBook };
 
 
 export const removeAppointments = (id) => {
