@@ -6,6 +6,7 @@ import Root from '../Pages/Root';
 import ErrorPage from '../Pages/ErrorPage';
 import Home from '../Pages/Home';
 import DocDetails from '../Pages/DocDetails';
+import MyBookings from '../Pages/MyBookings';
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,12 @@ export const router = createBrowserRouter([
           path:"/doctorDetails/:id",
           loader:()=>fetch('/doctors.json'),
           Component:DocDetails,
+        },
+        {
+         path:'/myBookings',
+         loader:()=>fetch('/doctors.json'),
+         Component:MyBookings,
+
         }
       ]
     },

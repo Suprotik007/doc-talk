@@ -1,16 +1,19 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import Doctor from './Doctor';
+import { addToStoreBook } from '../Utilities/Booking';
 const DocDetails = () => {
     const {id}=useParams()
     const data=useLoaderData()
     const docId=parseInt(id)
     
     const singleDoc = data.doctors.find(doc => doc.id === docId);
-    const {image,name,education,registrationNumber,speciality,availableDays,fee,workingAt }=singleDoc;
+    const {image,name,education,registrationNumber,speciality,availableDays,fee,workingAt,availability }=singleDoc;
     // console.log(singleDoc);
     
-    
+    const handleBookings=(id)=>{
+addToStoreBook(id)
+    }
     
     
     
@@ -45,15 +48,17 @@ const DocDetails = () => {
 </div>
 {/* appointment */}
 
-<div className="hero bg-base-200 min-h-screen">
-  <div className="hero-content text-center">
-    <div className="max-w-md">
-      <h1 className="text-5xl font-bold">Hello there</h1>
-      <p className="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button className="btn btn-primary">Get Started</button>
+<div className=" bg-white pt-5 px-10 mb-8 rounded-2xl text-center mx-40 mt-8 ">
+  <div className=" text-center">
+    <div className="">
+      <h1 className="text-4xl font-bold pb-4 border-b-1 border-dashed">Book an Appointment</h1>
+      <div className='flex  justify-between border-b-1 pb-5 border-gray-400 pt-5'>
+        <p className='font-medium'>Availability</p>
+        <p className='badge  border-emerald-700  bg-emerald-200 text-emerald-900'>Doctor {availability} Today</p>
+       
+      </div> 
+      <p className='badge text-xs mt-5  border-amber-500  bg-amber-100 text-amber-600'> ! Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
+      <button onClick={()=>handleBookings(id)} className="btn btn-primary rounded-3xl w-2xl  mt-8 mb-12">Book Appointment Now</button>
     </div>
   </div>
 </div>

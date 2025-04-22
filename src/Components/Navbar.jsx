@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const links=< >
-    <li>Home</li>
-    <li>My-Bookings</li>
-    <li>Blogs</li>
-    <li>Contact Us</li>
+    
+    <Link  to='/'><span className=' hover:text-blue-500'>Home</span></Link>
+    <Link to='/myBookings'><span className=' hover:text-blue-500'>My-bookings</span></Link>
+    <Link to='/'><span className=' hover:text-blue -500'>Blogs</span></Link>
+    <span className=' hover:text-blue-500'>Contact Us</span>
+    
     </>
     return (
         <div className="navbar mt-5 md:px-10 lg:px-40  ">
@@ -23,7 +26,7 @@ const Navbar = () => {
           <p className="flex items-center gap-3 font-extrabold  text-3xl btn-ghost "><img className='w-[48px] h-[48px]' src="/src/assets/logo.png" alt="" /> Phudu</p>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal gap-10 px-1 font-medium text-gray-500">
+          <ul className="menu menu-horizontal gap-10 px-1 font-medium text-gray-500 ">
             {links}
           </ul>
         </div>
