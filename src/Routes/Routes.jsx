@@ -7,6 +7,7 @@ import ErrorPage from '../Pages/ErrorPage';
 import Home from '../Pages/Home';
 import DocDetails from '../Pages/DocDetails';
 import MyBookings from '../Pages/MyBookings';
+import Blogs from '../Pages/Blogs';
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +36,11 @@ export const router = createBrowserRouter([
           
           path:'/contact',
           Component:ErrorPage,
+        },
+        {
+          path:'/blogs',
+          loader:()=>fetch('/blogs.json'),
+          Component: Blogs,
         }
       ]
     },

@@ -5,16 +5,20 @@ import { FaFacebook } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io5";
 import { NavLink } from 'react-router';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 const Footer = () => {
     const links=
     < >
- <Navbar></Navbar>
- {/* <span className=' hover:text-blue-500'>Home</span>
-    <span className=' hover:text-blue-500'>My-bookings</span>
-    <span className=' hover:text-blue-500'>Blogs</span>
-   <span className=' hover:text-blue-500'>Contact Us</span> */}
-    </>
+ 
+
+      
+      <NavLink  to='/'><span className=' hover:text-blue-500'>Home</span></NavLink>
+      <NavLink to='/myBookings'><span className=' hover:text-blue-500'>My-bookings</span></NavLink>
+      <NavLink to='/blogs'><span className='hover:text-blue-500'>Blogs</span></NavLink>
+      <NavLink to='/contact'><span className=' hover:text-blue-500'>Contact Us</span></NavLink>
+      
+      </>
+    
     
     return (
         <footer className="footer footer-horizontal footer-center bg-white   p-10">

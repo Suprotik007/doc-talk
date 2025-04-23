@@ -1,0 +1,35 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is useState and how does it work in React?",
+        "answer": "useState is a Hook in React that lets you add state to functional components. It returns an array with two elements: the current state value and a function to update it. When the state changes, the component re-renders.",
+        "posted_date": "2025-04-23"
+      },
+      {
+        "id": 2,
+        "question": "What is the purpose of useEffect in React?",
+        "answer": "useEffect is a Hook that lets you perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM. It takes two arguments: a callback function and an optional dependency array. If the array is empty, the effect runs only once after the initial render.",
+        "posted_date": "2025-04-23"
+      },
+      {
+        "id": 3,
+        "question": "What is a custom hook in React and when should you use one?",
+        "answer": "A custom hook is a reusable function that starts with 'use' and can call other hooks. You should use one when you want to extract and reuse logic between components, like handling form inputs, API calls, or authentication. Custom hooks help keep your components clean and DRY (Don't Repeat Yourself).",
+        "posted_date": "2025-04-23"
+      },
+      {
+        "id": 4,
+        "question": "Difference between controlled and uncontrolled components? Which one is better?",
+        "answer": "Controlled components are those where form data is handled by the component’s state using useState. Uncontrolled components store their own state internally via refs. Controlled components are preferred in most cases because they offer better control, validation, and predictable behavior.",
+        "posted_date": "2025-04-23"
+      },
+      {
+        "id": 5,
+        "question": "Tell us something about useFormStatus() (explore and explain)",
+        "answer": "useFormStatus is a newer React hook (used in frameworks like Next.js with React Server Components) that allows you to track the status of form submissions (e.g., pending, success, error). It's useful for UI feedback, such as disabling a submit button during submission. It helps improve UX without extra boilerplate.",
+        "posted_date": "2025-04-23"
+      }
+    ]
+  }
+  
