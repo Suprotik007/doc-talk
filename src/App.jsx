@@ -1,12 +1,16 @@
-import { useState } from 'react'
 
+
+import { Suspense } from 'react'
 import './App.css'
+import DocDetails from './Pages/DocDetails'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
+      
+<DocDetails></DocDetails>
       
     </>
   )

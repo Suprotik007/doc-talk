@@ -1,20 +1,24 @@
-import React from 'react';
+// import React, { Suspense } from 'react';
 import Navbar from '../Components/Navbar';
 import { Outlet, useLocation } from 'react-router';
 import Footer from '../Components/Footer';
-import Banner from '../Components/Banner';
+
 
 const Root = () => {
+  // const navigation = useNavigation();
     const location = useLocation();
   const hideNavFooter = location.pathname === '/contact';
 
   return (
     <>
+      
       {!hideNavFooter && <Navbar />}
-      <Outlet />
+       
+       <Outlet />
+      
       {!hideNavFooter && <Footer />}
     </>
   );
 };
 
-export default Root;
+export default Root

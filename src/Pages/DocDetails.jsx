@@ -1,12 +1,20 @@
-import React from 'react';
+// import React, { Suspense } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
-import Doctor from './Doctor';
+// import Doctor from './Doctor';
 import { addToStoreBook } from '../Utilities/Booking';
+
+
+import React, { Suspense, lazy } from 'react';
+
+
+
 const DocDetails = () => {
     const {id}=useParams()
     const data=useLoaderData()
     const docId=parseInt(id)
+
+    
     
     const singleDoc = data.doctors.find(doc => doc.id === docId);
     const {image,name,education,registrationNumber,speciality,availableDays,fee,workingAt,availability }=singleDoc;
@@ -39,7 +47,10 @@ const handleBookings = (id) => {
 };
     
     return (
+      
         <div>
+           
+    
         <div className='py-18 px-40 mb-8 bg-white rounded-2xl text-center mx-40 mt-8'>
    <h1 className='font-extrabold text-4xl'>Doctor’s Profile Details</h1>
    <p className='text-lg pt-4 text-gray-500'>"Our doctors are dedicated professionals committed to providing the highest standard of medical care. With years of specialized training and hands-on experience, they ensure each patient receives personalized attention and expert treatment."</p>
@@ -82,7 +93,9 @@ const handleBookings = (id) => {
       <button onClick={()=>{handleBookings(id), handleBookAppointment()}} className="btn btn-primary rounded-3xl w-2xl  mt-8 mb-12">Book Appointment Now</button>
     </div><ToastContainer />
   </div>
+  
 </div>
+
 </div>
     );
 };

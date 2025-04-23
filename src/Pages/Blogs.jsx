@@ -13,7 +13,7 @@ const Blogs = () => {
               <h1 className='font-extrabold text-4xl'>Blogs</h1>
               <p className='text-lg pt-6 pb-15 text-gray-500'>Let's explore some basic questions that will enhance your development journey.</p>
               </div>
-              <div className="join join-vertical border-1 border-dashed border-gray-500 bg-white mx-82">
+               <div className="join join-vertical border-1 border-dashed border-gray-500 bg-white mx-82">
         {data.questions.map(({ id, question, answer, posted_date }) => (
           <div key={id} className="collapse collapse-arrow join-item border border-base-300">
             <input type="radio" name={`accordion-${id}`} />
