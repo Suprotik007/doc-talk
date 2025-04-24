@@ -16,18 +16,33 @@ const Service = () => {
         {/* Card 1 */}
         <div className="text-left bg-white p-6 sm:p-8 lg:p-12 shadow-md rounded-lg">
           <img className="pb-4 w-16" src="/assets/success-doctor.png" alt="Doctors" />
-          <CountUp prefix="+" start={0} end={199} delay={1}>
+          <CountUp  start={0} 
+  end={199}
+  delay={2}
+  duration={4}
+  suffix="+"
+  enableScrollSpy
+  scrollSpyOnce
+>
             {({ countUpRef }) => (
               <span className="font-bold text-3xl sm:text-4xl lg:text-5xl" ref={countUpRef}></span>
             )}
           </CountUp>
+            
           <p className="text-base sm:text-lg pt-4 text-gray-500">Total Doctors</p>
         </div>
 
         {/* Card- 2 */}
         <div className="text-left bg-white p-6 sm:p-8 lg:p-12 shadow-md rounded-lg">
           <img className="pb-4 w-16" src="/assets/success-review.png" alt="Reviews" />
-          <CountUp prefix="+" start={0} end={467} delay={1}>
+          <CountUp start={0}
+  end={487}
+  delay={2}
+  duration={4}
+  suffix="+"
+  enableScrollSpy
+ scrollSpyOnce
+>
             {({ countUpRef }) => (
               <span className="font-bold text-3xl sm:text-4xl lg:text-5xl" ref={countUpRef}></span>
             )}
@@ -38,7 +53,14 @@ const Service = () => {
         {/* Card -3 */}
         <div className="text-left bg-white p-6 sm:p-8 lg:p-12 shadow-md rounded-lg">
           <img className="pb-4 w-16" src="/assets/success-patients.png" alt="Patients" />
-          <CountUp prefix="+" start={0} end={1900} delay={1}>
+          <CountUp  start={0}
+  end={940}
+  delay={2}
+  duration={4}
+  suffix="+"
+  enableScrollSpy
+  scrollSpyOnce
+>
             {({ countUpRef }) => (
               <span className="font-bold text-3xl sm:text-4xl lg:text-5xl" ref={countUpRef}></span>
             )}
@@ -49,7 +71,14 @@ const Service = () => {
         {/* Card-- 4 */}
         <div className="text-left bg-white p-6 sm:p-8 lg:p-12 shadow-md rounded-lg">
           <img className="pb-4 w-16" src="/assets/success-staffs.png" alt="Staffs" />
-          <CountUp prefix="+" start={0} end={300} delay={1}>
+          <CountUp start={0}
+  end={583}
+  delay={2}
+  duration={4}
+  suffix="+"
+  enableScrollSpy
+ scrollSpyOnce
+>
             {({ countUpRef }) => (
               <span className="font-bold text-3xl sm:text-4xl lg:text-5xl" ref={countUpRef}></span>
             )}
