@@ -24,7 +24,7 @@ const Footer = () => {
         <footer className="footer footer-horizontal footer-center bg-white   p-10">
   <aside>
     
-    <p className="flex items-center gap-3  font-extrabold  text-2xl btn-ghost "><img className='w-[35px] h-[35px]' src="/src/assets/logo.png" alt="" /> Phudu</p>
+    <p className="flex items-center gap-3  font-extrabold  text-2xl btn-ghost "><img className='w-[35px] h-[35px]' src="/assets/logo.png" alt="" /> DocTalk</p>
   </aside>
   <nav>
   <div className="navbar-center  lg:flex">

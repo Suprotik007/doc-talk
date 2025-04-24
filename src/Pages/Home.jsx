@@ -19,9 +19,6 @@ const Home = () => {
         <Service></Service>
     </div>
          </div>   
-            
-    
-
 
     );
 };

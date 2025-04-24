@@ -28,7 +28,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <p className="flex items-center gap-3 font-extrabold  text-3xl btn-ghost "><img className='w-[48px] h-[48px]' src="/src/assets/logo.png" alt="" /> Phudu</p>
+          <p className="flex items-center gap-3 font-extrabold  text-3xl btn-ghost "><img className='w-[48px] h-[48px]' src="/assets/logo.png"  /> DocTalk</p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal gap-10 px-1 font-medium text-gray-500 ">

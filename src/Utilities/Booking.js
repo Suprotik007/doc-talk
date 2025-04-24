@@ -32,7 +32,7 @@ export { addToStoreBook, getStoredBook };
 
 
 export const removeAppointments = (id) => {
-    const appointments = getStoredBook(); // array of strings
+    const appointments = getStoredBook(); 
     const idStr = id.toString();
   
     const remainingAppointments = appointments.filter(appointmentId => appointmentId !== idStr);
