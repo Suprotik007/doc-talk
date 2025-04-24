@@ -23,12 +23,12 @@ const Banner = () => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10 pb-20">
           <img
             className="w-72 sm:w-80 md:w-96"
-            src="/src/assets/banner-img-1.png"
+            src="/assets/banner-img-1.png"
             alt="Doctor 1"
           />
           <img
             className="w-72 sm:w-80 md:w-96"
-            src="/src/assets/banner-img-1.png"
+            src="/assets/banner-img-1.png"
             alt="Doctor 2"
           />
         </div>
