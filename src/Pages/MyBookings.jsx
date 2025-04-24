@@ -20,6 +20,9 @@ const MyBookings = () => {
     const myBookings = data.doctors.filter(appointment => convertBookingData.includes(appointment.id));
     setBookings(myBookings);
   }, [data.doctors]);
+// MyBookings.jsx
+
+
 
   const handleRemove = (id) => {
     removeAppointments(id);
@@ -62,7 +65,7 @@ const MyBookings = () => {
           margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis className='XAxis ' tickMargin={50} angle={-40} dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />

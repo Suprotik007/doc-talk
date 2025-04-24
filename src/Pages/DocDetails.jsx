@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { addToStoreBook } from '../Utilities/Booking';
 
 
-import React, { Suspense, lazy } from 'react';
+// import React, { Suspense, lazy } from 'react';
 
 
 

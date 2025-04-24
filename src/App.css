@@ -5,3 +5,6 @@
 .active{
     border-bottom: 2px solid ;
 }
+.XAxis{
+transform: rotate(-1);
+}
