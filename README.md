@@ -1,12 +1,26 @@
-# React + Vite
+🩺 Doc-Talk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Doc-Talk is a modern web platform that allows users to browse doctor profiles, book or cancel appointments, and view detailed information about each doctor. It also provides a visual overview of booked appointments and total fees through an intuitive graph.
 
-Currently, two official plugins are available:
+Live Site : [https://doctalk-dx.netlify.app/ ]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## Expanding the ESLint configuration
+🧑‍⚕ Doctor Profiles: View profiles of both active and inactive doctors.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Includes details such as degree, experience, medical college, and more.
+
+
+📅 Appointment Booking: Users can book and cancel appointments with ease.
+
+📋 My Appointments: View a list of all appointments you’ve booked.
+
+📊 Analytics Graph: Visual representation of total appointments and fees paid.
+
+
+🛠 Tech Stack
+
+React – Frontend framework for building interactive UI.
+
+Tailwind CSS – Utility-first CSS framework for styling.
+
